@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: eureka-provider-config-client #需要从github上读取的资源名称，注意没有yml后缀名,即springcloud-config下新建的eureka-provider-config-client.yml文件
+      profile: dev #本次访问的配置项
+      label: master
+      uri: http://localhost:3344  #本微服务启动后先去找3344号服务(即我们的config-server服务获取GitHub的服务地址)
